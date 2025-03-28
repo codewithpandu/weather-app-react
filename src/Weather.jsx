@@ -76,7 +76,7 @@ export default function Weather() {
   }, []);
 
   return (
-    <div className="p-8 bg-gradient-to-tr from-blue-600 to-blue-900 rounded-2xl w-99">
+    <div className="p-8 bg-gradient-to-tr from-blue-600 to-blue-900 rounded-2xl w-[22rem] md:w-[27rem]">
       <div className="flex gap-2">
         <input ref={searchInput} type="text" placeholder="Cari Lokasi" className="bg-white p-3 rounded-3xl flex-1 placeholder:text-black focus:outline-0" />
         <button onClick={() => search(searchInput.current.value)} className="bg-white p-3 rounded-full cursor-pointer hover:bg-zinc-200">
@@ -92,16 +92,16 @@ export default function Weather() {
       </div>
       <div>
         <div className="flex justify-between gap-2">
-          <div className="flex gap-2 bg-white/15 p-4 flex-1 rounded-2xl">
+          <div className="flex gap-2 bg-white/15 p-2 md:p-4 flex-1 rounded-2xl ">
             <img src={Humidity} width={25} />
-            <p className="text-lg font flex flex-col text-amber-50">
-              Humidity <span className="font-bold">{dataWeather.humidity}</span>
+            <p className="text-sm font flex flex-col justify-center text-amber-50">
+              Humidity <span className="font-bold text-sm md:text-xl">{dataWeather.humidity}</span>
             </p>
           </div>
-          <div className="flex gap-2 bg-white/15 p-4 flex-1 rounded-2xl">
+          <div className="flex gap-2 bg-white/15 p-2 md:p-4 flex-1 rounded-2xl">
             <img src={WindSpeed} width={25} />
-            <p className="text-lg font flex flex-col text-amber-50">
-              Wind Speed <span className="font-bold">{dataWeather.windSpeed} Km/h</span>
+            <p className="text-sm font flex flex-col text-amber-50">
+              Wind Speed <span className="font-bold text-sm md:text-xl">{dataWeather.windSpeed} Km/h</span>
             </p>
           </div>
         </div>
