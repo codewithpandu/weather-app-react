@@ -76,7 +76,7 @@ export default function Weather() {
   }, []);
 
   return (
-    <div className="p-8 bg-gradient-to-tr from-blue-600 to-blue-900 rounded-2xl w-99 md:w-80">
+    <div className="p-8 bg-gradient-to-tr from-blue-600 to-blue-900 rounded-2xl w-80 md:w-99">
       <div className="flex gap-2">
         <input ref={searchInput} type="text" placeholder="Cari Lokasi" className="bg-white p-3 rounded-3xl flex-1 placeholder:text-black focus:outline-0" />
         <button onClick={() => search(searchInput.current.value)} className="bg-white p-3 rounded-full cursor-pointer hover:bg-zinc-200">
